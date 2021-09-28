@@ -8,13 +8,23 @@ import {
   Works,
   Info,
   Technologies,
-  BigTitle
+  BigTitle,
+  Footer
 } from '../screens';
 import {
   Navbar,
   Sidebar
 } from '../components';
 import { defaultData } from '../pages_data/home_data/data';
+import {
+  authSiteWorksData,
+  thisSiteWorksData,
+  pokeAppWorksData,
+  mtgAppWorksData,
+  frontEndInfoData,
+  backEndInfoData,
+  deployInfoData,
+} from '../screens'
 
 const Home = () => {
   const [english, setEnglish] = useState(false)
@@ -44,18 +54,22 @@ const Home = () => {
       <Hero {...hero} english={english} />
       <Wrapper id='works'>
         <BigTitle {...worksTitle} english={english} />
-        <Works {...works} src='/AdminSitePick.png' english={english} />
-        <Works {...worksTextStartFalse} src='/AdminSitePick.png' english={english} id='works' />
+        <Works {...authSiteWorksData} src='/AuthSite.png' english={english} />
+        <Works {...thisSiteWorksData} src='/ThisVerySite.png' english={english} />
+        <Works {...pokeAppWorksData} src='/PokemonSite.png' english={english} />
+        <Works {...mtgAppWorksData} src='/MTGAppSite.png' english={english} />
       </Wrapper>
       <Wrapper id='habilities'>
         <BigTitle {...infoTitle} english={english} />
-        <Info {...info} src='/ClientSide.svg' english={english} />
-        <Info {...infoTextStartFalse} src='/ClientSide.svg' english={english} />
+        <Info {...frontEndInfoData} src='/Frontend.svg' english={english} />
+        <Info {...backEndInfoData} src='/Backend.svg' english={english} />
+        <Info {...deployInfoData} src='/Deploy.svg' english={english} />
       </Wrapper>
       <Wrapper id='technologies'>
         <BigTitle {...technologiesTitle} english={english} />
-        <Technologies {...technologies} src='/frontend.svg' english={english} />
+        <Technologies {...technologies} src='/FrontendList.svg' english={english} />
       </Wrapper>
+      <Footer />
     </>
   )
 }

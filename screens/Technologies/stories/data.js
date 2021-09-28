@@ -1,10 +1,14 @@
-import { defaultCardData } from '../../../components';
+import {
+  frontendListCardData,
+  backendListCardData,
+  deployListCardData,
+} from '../../../components';
 
 export const defaultData = {
   title: 'Tecnologies',
   technologies: [
-    { ...defaultCardData },
-    { ...defaultCardData },
-    { ...defaultCardData }
+    { ...frontendListCardData },
+    { ...backendListCardData },
+    { ...deployListCardData }
   ]
 }

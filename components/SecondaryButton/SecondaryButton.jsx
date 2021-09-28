@@ -3,13 +3,29 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { GlobalStyles, colors, device } from '../../styles';
 
-const SecondaryButton = () => {
+const SecondaryButton = ({
+  english,
+  engButtonText,
+  buttonText,
+  path,
+  ankerTag = false
+}) => {
   return (
     <>
-      <GlobalStyles />
-      <Link href='/'>
-        <A>secBtn</A>
-      </Link>
+      {ankerTag ? (
+        <>
+          <GlobalStyles />
+          <A href={path}>{english ? engButtonText : buttonText}</A>
+        </>
+      ) : (
+        <>
+          <GlobalStyles />
+          <Link href={path}>
+            <A>{english ? engButtonText : buttonText}</A>
+          </Link>
+        </>
+      )
+      }
     </>
   )
 }

@@ -33,6 +33,7 @@ const Img = styled.img`
   width: ${({ imgWidth: { mobileS } }) => mobileS};
   align-self:end;
   height:auto;
+  border-radius:10px;
   @media ${device.tablet}{
     width: ${({ imgWidth: { tablet } }) => tablet};
   }

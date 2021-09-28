@@ -7,9 +7,7 @@ import {
 import { Card } from '../../components'
 
 const Technologies = ({
-  technologies,
-  title,
-  src,
+  technologies
 }) => {
   return (
     <>
